@@ -1,4 +1,10 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
+from .models import Estudiante,Profesor,Curso
 
 def index(request):
-    return render(request,'CORE/index.html',{"saludo" : "Holaaaa"})
+    return render(request,'CORE/index.html')
+
+def verEstudiante(request):
+    estudiantesRegistrados = Estudiante.objects.all()
+    contexto = {"estudiantes" : estudiantesRegistrados}
+    return  render ( request,"CORE/base.html",contexto)

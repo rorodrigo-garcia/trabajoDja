@@ -3,17 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Pag</title>
 </head>
 <body>
     {% block TITULO %}
     
     {% endblock TITULO %}
 
-    {% block CONTENIDO %}
+    {% block ESTUDIANTE %}
+    {% for estudiante in estudiantes %}
+    <p> {{estudiante.nombre}} , {{estudiante.apellido}} </p>
+    {% endfor %}
+    {% endblock ESTUDIANTE %}
+    {% block PROFESOR %}
     
+    {% endblock PROFESOR %}
+    {% block CURSO %}
     
-    {% endblock CONTENIDO %}
+    {% endblock CURSO %}
     
 </body>
 </html>

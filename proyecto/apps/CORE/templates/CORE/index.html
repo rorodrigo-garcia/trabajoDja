@@ -1,9 +1,24 @@
 {% extends 'CORE/base.html' %}
 
 {% block TITULO %}
-    <h1>TITULO</h1>
+    <h1>Desafio N°3</h1>
 {% endblock TITULO %}
 
-{% block CONTENIDO %}
-    <p>Contenido {{saludo}} </p>
-{% endblock CONTENIDO %}
+{% block ESTUDIANTE %}
+    <h2> <u>Estudiantes</u> </h2>
+    {% for estudiante in estudiantes %}
+    <p> {{estudiante.nombre}} , {{estudiante.apellido}} </p>
+    {% endfor %}
+    <button> crear estudiante </button>
+{% endblock ESTUDIANTE %}
+
+{% block PROFESOR %}
+    <h2> <u>Profesores</u> </h2>
+   
+    <button> crear profesor </button>
+{% endblock PROFESOR %}
+
+{% block CURSO %}
+    <h2> <u>Cursos</u> </h2>
+    <button> crear curso </button>
+{% endblock CURSO %}
