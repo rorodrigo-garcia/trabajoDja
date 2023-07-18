@@ -7,4 +7,4 @@ def index(request):
 def verEstudiante(request):
     estudiantesRegistrados = Estudiante.objects.all()
     contexto = {"estudiantes" : estudiantesRegistrados}
-    return  render ( request,"CORE/base.html",contexto)
+    return  render ( request,"CORE/index.html",contexto)
