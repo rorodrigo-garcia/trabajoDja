@@ -1,0 +1,14 @@
+{% extends 'CORE/index.html' %}
+
+{% block FORME %}
+<h1> Crear estudiante </h1>
+{% endblock FORME %}
+{% block CONTENIDO %}
+
+    <form method="post"> 
+        {% csrf_token %}
+        {{form}}
+        <button type="submit"> Guardar</button>
+    </form>
+
+{% endblock CONTENIDO %}
