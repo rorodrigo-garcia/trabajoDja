@@ -1,0 +1,14 @@
+{% extends 'CORE/index.html' %}
+
+{% block FORMC %}
+<h1> Crear curso</h1>
+{% endblock FORMC %}
+{% block CONTENIDOC %}
+
+    <form method="post"> 
+        {% csrf_token %}
+        {{form}}
+        <button type="submit"> Guardar</button>
+    </form>
+
+{% endblock CONTENIDOC %}

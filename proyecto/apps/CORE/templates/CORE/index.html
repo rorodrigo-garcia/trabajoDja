@@ -9,18 +9,21 @@
     {% for estudiante in estudiantes %}
     <p> {{estudiante.nombre}} , {{estudiante.apellido}} </p>
     {% endfor %}
-    <button> crear estudiante </button>
-    {% block FORME %}
-    {% endblock FORME %}
+   
+   
 {% endblock ESTUDIANTE %}
 
 {% block PROFESOR %}
     <h2> <u>Profesores</u> </h2>
    
-    <button> crear profesor </button>
+    {% for profesor in profesores %}
+    <p> {{profesor.nombre}} {{profesor.especialidad}} </p>
+        {% endfor %}
+   
+
 {% endblock PROFESOR %}
 
 {% block CURSO %}
     <h2> <u>Cursos</u> </h2>
-    <button> crear curso </button>
+  
 {% endblock CURSO %}

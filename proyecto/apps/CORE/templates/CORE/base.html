@@ -14,13 +14,34 @@
     {% for estudiante in estudiantes %}
     <p> {{estudiante.nombre}} , {{estudiante.apellido}} </p>
     {% endfor %}
+    {% block FORME %}
+    {% endblock FORME %}
     {% endblock ESTUDIANTE %}
+    {% block CONTENIDO %}
+    {% endblock CONTENIDO %}
+    
+    
     {% block PROFESOR %}
-    
+    {% for profesor in profesores %}
+    <p> {{profesor.nombre}} {{profesor.especialidad}} </p>
+        {% endfor %}
+    {% block FORMP %}
+    {% endblock FORMP %}
     {% endblock PROFESOR %}
-    {% block CURSO %}
+    {% block CONTENIDOP %}
+    {% endblock CONTENIDOP %}
     
+    
+    
+    {% block CURSO %}
+    {% for curso in cursos %}
+    <p> {{curso.nombre}} {{curso.descripcion}} </p>
+    {% endfor %}
+    {% block FORMC %}
+    {% endblock FORMC %}
     {% endblock CURSO %}
+    {% block CONTENIDOC %}
+    {% endblock CONTENIDOC %}
     
 </body>
 </html>

@@ -1,0 +1,14 @@
+{% extends 'CORE/index.html' %}
+
+{% block FORMP %}
+<h1> Crear profesor </h1>
+{% endblock FORMP %}
+{% block CONTENIDOP %}
+
+    <form method="post"> 
+        {% csrf_token %}
+        {{form}}
+        <button type="submit"> Guardar</button>
+    </form>
+
+{% endblock CONTENIDOP %}
