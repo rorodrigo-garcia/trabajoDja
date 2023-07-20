@@ -9,7 +9,7 @@
     {% for estudiante in estudiantes %}
     <p> {{estudiante.nombre}} , {{estudiante.apellido}} </p>
     {% endfor %}
-   
+    <a class="nav-link active" aria-current="page" href="{%  url 'CORE:crearEstudiante'%}">Crear Estudiante</a>
    
 {% endblock ESTUDIANTE %}
 
@@ -19,11 +19,11 @@
     {% for profesor in profesores %}
     <p> {{profesor.nombre}} {{profesor.especialidad}} </p>
         {% endfor %}
-        <a class="nav-link active" aria-current="page" href="{% url 'CORE : crearEstudiante' %}">Crear Estudiante</a>
+        <a class="nav-link active" aria-current="page" href="{%  url 'CORE:crearProfesor'%}">Crear Profesor</a>
 
 {% endblock PROFESOR %}
 
 {% block CURSO %}
     <h2> <u>Cursos</u> </h2>
-  
+    <a class="nav-link active" aria-current="page" href="{%  url 'CORE:crearCurso'%}">Crear Curso</a>
 {% endblock CURSO %}
