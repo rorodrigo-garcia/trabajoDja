@@ -19,7 +19,7 @@
     {% for profesor in profesores %}
     <p> {{profesor.nombre}} {{profesor.especialidad}} </p>
         {% endfor %}
-   
+        <a class="nav-link active" aria-current="page" href="{% url 'CORE : crearEstudiante' %}">Crear Estudiante</a>
 
 {% endblock PROFESOR %}
 
